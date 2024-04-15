@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Bruen Group",
+    "id": "fc040d7d-856c-afce-60e3-6a11a5844247",
+    "expectedMonthlyUsage": 10
+  },
+  {
+    "name": "Koepp, Hagenes and Durgan",
+    "id": "3cdbbb38-ed21-c64a-84d0-6c4a327b5ce7",
+    "expectedMonthlyUsage": 15
+  },
+  {
+    "name": "Hayes - Fadel",
+    "id": "01fa0292-6ae1-2379-f507-d81e578da575",
+    "expectedMonthlyUsage": 12
+  },
+  {
+    "name": "Simonis Group",
+    "id": "9d1fcb74-c473-cf5c-376e-c5a2b786654d",
+    "expectedMonthlyUsage": 10
+  },
+  {
+    "name": "Roob and Sons",
+    "id": "59854657-e146-57cc-f51a-ff9f1b3eec31",
+    "expectedMonthlyUsage": 6
+  },
+  {
+    "name": "Monahan - Conn",
+    "id": "d0c53faf-d27f-cf8d-23ab-5d59036a73ef",
+    "expectedMonthlyUsage": 8
+  },
+  {
+    "name": "Zieme - Rempel",
+    "id": "0acb127a-e611-c2ff-1e5a-733b32a5eb12",
+    "expectedMonthlyUsage": 7
+  },
+  {
+    "name": "O'Keefe Group",
+    "id": "30963f0a-73b9-5d4b-cebd-ae144f612bac",
+    "expectedMonthlyUsage": 5
+  },
+  {
+    "name": "McLaughlin LLC",
+    "id": "5adab61c-31b0-2415-3bc3-cede13747b01",
+    "expectedMonthlyUsage": 8
+  },
+  {
+    "name": "Thiel - Corkery",
+    "id": "9e2100a8-dbb4-291a-11c5-3b4613d58967",
+    "expectedMonthlyUsage": 10
+  },
+  {
+    "name": "Bailey and Sons",
+    "id": "44f645c2-d227-01ae-b87a-4a5ea47e9b9c",
+    "expectedMonthlyUsage": 13
+  },
+  {
+    "name": "Grimes - Gleichner",
+    "id": "98aad1e1-2658-5af1-099a-56ccdad61899",
+    "expectedMonthlyUsage": 7
+  },
+  {
+    "name": "Moore Group",
+    "id": "ceb02d49-f51b-b0be-afd0-d801a7e9c4a7",
+    "expectedMonthlyUsage": 7
+  },
+  {
+    "name": "Christiansen - Herman",
+    "id": "f5db3cb6-2054-6b30-d2de-f2466f47570f",
+    "expectedMonthlyUsage": 11
+  },
+  {
+    "name": "Bergstrom Group",
+    "id": "7e495f7d-b23b-8cfb-820b-28d3fdebe308",
+    "expectedMonthlyUsage": 13
+  },
+  {
+    "name": "Shanahan - Hayes",
+    "id": "59fd3b2a-38c8-7867-4667-351acf26728d",
+    "expectedMonthlyUsage": 9
+  },
+  {
+    "name": "Sporer, Funk and Cruickshank",
+    "id": "c4a9c4d1-ec74-1594-85a7-a9c91a04e74f",
+    "expectedMonthlyUsage": 8
+  },
+  {
+    "name": "Ankunding - Douglas",
+    "id": "c3044739-d547-5861-7030-4aeb9e812094",
+    "expectedMonthlyUsage": 9
+  },
+  {
+    "name": "Emard, Kirlin and Boyle",
+    "id": "3e159f44-9e33-34c2-3950-0723b9e32a19",
+    "expectedMonthlyUsage": 13
+  },
+  {
+    "name": "Kerluke Group",
+    "id": "a3f06bb5-6d29-4a5f-19bf-c7d9fdc007c4",
+    "expectedMonthlyUsage": 10
+  },
+  {
+    "name": "Price Inc",
+    "id": "d1bb5c91-d29f-498e-f453-83b0147c3f60",
+    "expectedMonthlyUsage": 16
+  },
+  {
+    "name": "Mayert Inc",
+    "id": "1ac2d752-006f-85da-6909-ead4fff1ab61",
+    "expectedMonthlyUsage": 15
+  },
+  {
+    "name": "Wiza, Klocko and Barrows",
+    "id": "36537780-848a-a6e4-1768-f1bbbc6ca5ed",
+    "expectedMonthlyUsage": 15
+  },
+  {
+    "name": "Kozey, Renner and Halvorson",
+    "id": "d8d90ba3-df4b-cb33-6268-247e45805275",
+    "expectedMonthlyUsage": 8
+  },
+  {
+    "name": "Windler, Jast and Price",
+    "id": "b63b5e4e-5bfd-ba63-9822-54dcb8b70982",
+    "expectedMonthlyUsage": 10
+  },
+  {
+    "name": "Larkin and Sons",
+    "id": "0551f221-2e28-a0d4-5992-3ebd7358c47c",
+    "expectedMonthlyUsage": 14
+  },
+  {
+    "name": "Miller - Considine",
+    "id": "1886b05c-0107-92db-4ff8-014bab8021e5",
+    "expectedMonthlyUsage": 16
+  },
+  {
+    "name": "Nolan - Wuckert",
+    "id": "9285dd32-6d5b-cb9d-d5eb-0b748c99a44b",
+    "expectedMonthlyUsage": 8
+  },
+  {
+    "name": "Bahringer - Gleason",
+    "id": "69a01f56-1ea8-a32c-fb6b-c6e6d1003a92",
+    "expectedMonthlyUsage": 16
+  },
+  {
+    "name": "Schmidt and Sons",
+    "id": "9e755592-9af4-aee6-d38b-64269d72852c",
+    "expectedMonthlyUsage": 6
+  },
+  {
+    "name": "Mayert Group",
+    "id": "91fc929a-1aa1-fcc5-c1f9-9b4138d2f11b",
+    "expectedMonthlyUsage": 10
+  },
+  {
+    "name": "Champlin, Walsh and Welch",
+    "id": "2045b6a0-3c77-c661-2ef0-75ca2d2c090d",
+    "expectedMonthlyUsage": 6
+  },
+  {
+    "name": "Schneider LLC",
+    "id": "e9ece03a-288e-0b8d-8871-cbf01144d518",
+    "expectedMonthlyUsage": 6
+  },
+  {
+    "name": "Abbott - Johnson",
+    "id": "749aae11-2a12-91a3-115e-77804acb2030",
+    "expectedMonthlyUsage": 9
+  },
+  {
+    "name": "Gerhold Inc",
+    "id": "eaaf6df1-2f74-7d40-0f0d-162e7c2470f8",
+    "expectedMonthlyUsage": 14
+  },
+  {
+    "name": "Douglas Inc",
+    "id": "1bd16788-51ef-b9cf-d2ac-06d698178567",
+    "expectedMonthlyUsage": 7
+  },
+  {
+    "name": "Thompson, Streich and Lakin",
+    "id": "3741ec27-2370-003f-694a-5284bc9f7922",
+    "expectedMonthlyUsage": 5
+  },
+  {
+    "name": "Kuhn - Crona",
+    "id": "74981606-b9e8-74a9-2fa0-1056019693bb",
+    "expectedMonthlyUsage": 7
+  },
+  {
+    "name": "Bosco - Howe",
+    "id": "01f6f75f-0b5b-1739-c19d-f34e8a2236fe",
+    "expectedMonthlyUsage": 5
+  },
+  {
+    "name": "Sporer - Abshire",
+    "id": "df2d93f7-d1da-f861-6af7-aa37008a9e3d",
+    "expectedMonthlyUsage": 7
+  }
+]
