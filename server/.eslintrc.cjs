@@ -14,6 +14,9 @@ module.exports = {
       },
     },
   },
+  globals: {
+    fastify: 'readonly'
+  },
   root: true,
   env: {
     node: true,

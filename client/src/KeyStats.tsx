@@ -8,7 +8,7 @@ export default (props) => {
         averageAttendanceRate = 0,
         topOverUsingPartners = [],
         topUnderUsingPartners = [],
-        busiestCoachByPartner = [],
+        coachesByPartner = [],
     } = props?.stats;
 
     return (
@@ -111,7 +111,7 @@ export default (props) => {
                 Coach utilisation by partner
                 <DataGrid
                     autoHeight={true}
-                    rows={busiestCoachByPartner}
+                    rows={coachesByPartner}
                     initialState={{
                         sorting: {
                             sortModel: [{ field: "expectedMonthlyUsage", sort: "desc" }],

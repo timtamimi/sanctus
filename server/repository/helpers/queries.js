@@ -1,6 +1,6 @@
 export default {
-    averageAttendanceRateQuery: `SELECT (SUM(CASE WHEN attended=1 THEN 1 ELSE 0 END)*1.0)/(COUNT(*)) as "averageAttendanceRate" FROM "Sessions"`,
-    topPartnersByUsageQuery: (order = desc, limit = 10) => `SELECT 
+  averageAttendanceRateQuery: `SELECT (SUM(CASE WHEN attended=1 THEN 1 ELSE 0 END)*1.0)/(COUNT(*)) as "averageAttendanceRate" FROM "Sessions"`,
+  topPartnersByUsageQuery: (order = desc, limit = 10) => `SELECT 
         "Partners".name,
         "Partners"."expectedMonthlyUsage" as estimated,
         COUNT("Sessions".id) as actual,
@@ -11,7 +11,7 @@ export default {
         GROUP BY "Coachees"."PartnerId"
         ORDER BY ratio ${order}
         LIMIT ${limit}`,
-    coachUtilisationBypartner: `SELECT 
+  coachUtilisationByPartner: `SELECT 
         CONCAT("Partners".id, '::', "Sessions".CoachEmail) as "id",
         "Partners".name,
         "Sessions"."CoachEmail",
@@ -24,5 +24,5 @@ export default {
         JOIN "Coachees" ON "Coachees"."PartnerId" = "Partners".id
         JOIN "Sessions" ON "Coachees"."id" = "Sessions".CoacheeId
         GROUP BY "Coachees"."PartnerId", "Sessions"."CoachEmail"
-        ORDER BY "countOfSessionsDelivered"/"expectedMonthlyUsage" desc`
-}
+        ORDER BY "countOfSessionsDelivered"/"expectedMonthlyUsage" desc`,
+};

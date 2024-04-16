@@ -10,18 +10,24 @@ await loadData();
 
 const HTTP_PORT = process.env.PORT || 8080;
 
-const app = Fastify({
-  logger: true,
-});
+const start = async () => {
+  const app = Fastify({
+    logger: true,
+  });
 
-await app.register(cors);
+  await app.register(cors);
 
-routes(app);
-app.listen(HTTP_PORT, async () => {
-  console.log('Service running');
-});
+  routes(app);
+  app.listen(HTTP_PORT, async () => {
+    console.log('Service running');
+  });
 
-process.on('unhandledRejection', (reason) => {
-  console.error(reason);
-  throw reason;
-});
+  process.on('unhandledRejection', (reason) => {
+    console.error(reason);
+    throw reason;
+  });
+};
+
+await start();
+
+export default start;
