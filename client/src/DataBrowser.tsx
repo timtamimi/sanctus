@@ -88,18 +88,19 @@ export default (props) => {
         <Grid container spacing={2}>
             <Grid item xs={12}>
                 <ToggleButtonGroup
+                    sx={{width: '100%'}}
                     value={dataView}
                     exclusive
                     onChange={(event, value) => setDataView(value)}
                 >
+                    <ToggleButton value="partners" disabled={dataView == "partners"}>
+                        Partners
+                    </ToggleButton>
                     <ToggleButton value="coaches" disabled={dataView == "coaches"}>
                         Coaches
                     </ToggleButton>
                     <ToggleButton value="coachees" disabled={dataView == "coachees"}>
                         Coachees
-                    </ToggleButton>
-                    <ToggleButton value="partners" disabled={dataView == "partners"}>
-                        Partners
                     </ToggleButton>
                     <ToggleButton value="sessions" disabled={dataView == "sessions"}>
                         Sessions
@@ -110,6 +111,11 @@ export default (props) => {
                 <DataGrid
                     rows={prepareDataForDataGrid(props[dataView])}
                     columns={columns[dataView]}
+                    initialState={{
+                        pagination: {
+                            paginationModel: {pageSize: 25, page: 0},
+                        },
+                    }}
                 />
             </Grid>
         </Grid>

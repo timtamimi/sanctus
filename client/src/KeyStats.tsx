@@ -1,4 +1,6 @@
 import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 import { Gauge, gaugeClasses } from "@mui/x-charts/Gauge";
 import { BarChart } from "@mui/x-charts/BarChart";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
@@ -14,35 +16,36 @@ export default (props) => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                Attendance rate across all coaches and partners
                 <Gauge
                     height={250}
                     value={averageAttendanceRate * 100}
                     text={`${averageAttendanceRate * 100}%`}
                 />
+                <Typography variant={'h6'}>Attendance rate across all coaches and partners</Typography>
             </Grid>
             <Grid item xs={12}>
-                Top over-utilised accounts
+                <Divider />
+            </Grid>
+            <Grid item xs={12}>
+                <Typography variant={'h6'} sx={{textAlign: 'left'}}>Top over-utilised accounts</Typography>
                 <BarChart
                     series={[
                         {
-                            id: "series-1",
+                            id: "estimated",
                             data: topOverUsingPartners.map(
                                 (eachPartner) => eachPartner.estimated
                             ),
                             label: "Estimated",
-                            stack: "total",
                             highlightScope: {
                                 highlighted: "item",
                             },
                         },
                         {
-                            id: "series-2",
+                            id: "utilised",
                             data: topOverUsingPartners.map(
                                 (eachPartner) => eachPartner.actual
                             ),
                             label: "Utilised",
-                            stack: "total",
                             highlightScope: {
                                 highlighted: "item",
                             },
@@ -60,32 +63,32 @@ export default (props) => {
                             id: "axis1",
                         },
                     ]}
-                    width={600}
                     height={350}
                 />
             </Grid>
             <Grid item xs={12}>
-                Least utilised accounts
+                <Divider />
+            </Grid>
+            <Grid item xs={12}>
+                <Typography variant={'h6'} sx={{textAlign: 'left'}}>Least utilised accounts</Typography>
                 <BarChart
                     series={[
                         {
-                            id: "series-1",
+                            id: "estimated",
                             data: topUnderUsingPartners.map(
                                 (eachPartner) => eachPartner.estimated
                             ),
                             label: "Estimated",
-                            stack: "total",
                             highlightScope: {
                                 highlighted: "item",
                             },
                         },
                         {
-                            id: "series-2",
+                            id: "utilised",
                             data: topUnderUsingPartners.map(
                                 (eachPartner) => eachPartner.actual
                             ),
                             label: "Utilised",
-                            stack: "total",
                             highlightScope: {
                                 highlighted: "item",
                             },
@@ -103,16 +106,21 @@ export default (props) => {
                             id: "axis1",
                         },
                     ]}
-                    width={600}
                     height={350}
                 />
             </Grid>
             <Grid item xs={12}>
-                Coach utilisation by partner
+                <Divider />
+            </Grid>
+            <Grid item xs={12}>
+                <Typography variant={'h6'} sx={{textAlign: 'left'}}>Coach utilisation by partner</Typography>
                 <DataGrid
                     autoHeight={true}
                     rows={coachesByPartner}
                     initialState={{
+                        pagination: {
+                            paginationModel: { pageSize: 25, page: 0 },
+                        },
                         sorting: {
                             sortModel: [{ field: "expectedMonthlyUsage", sort: "desc" }],
                         },
