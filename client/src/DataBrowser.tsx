@@ -38,6 +38,13 @@ export default (props) => {
                 width: 150,
                 type: "number",
             },
+            {
+                field: "attendanceRate",
+                headerName: "Attendance rate (January)",
+                width: 150,
+                type: "number",
+                renderCell: ({ row }) => `${(row?.attendanceRate * 100).toFixed(2)}%`,
+            },
         ],
         coaches: [
             { field: "email", headerName: "Email", width: 300 },
