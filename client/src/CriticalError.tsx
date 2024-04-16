@@ -1,7 +1,7 @@
-import 'ldrs/helix'
+import "ldrs/helix";
 
 export default () => {
-    return <div>
-        Something has gone wrong when attempting to retrieve the data
-    </div>
-}
+    return (
+        <div>Something has gone wrong when attempting to retrieve the data</div>
+    );
+};

@@ -1,5 +1,5 @@
-import 'ldrs/helix'
+import "ldrs/helix";
 
 export default () => {
-    return <l-helix color={'black'}></l-helix>
-}
+    return <l-helix color={"black"}></l-helix>;
+};

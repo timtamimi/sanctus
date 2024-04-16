@@ -9,9 +9,12 @@ export default (app) => {
       where.partnerId = partnerId;
     }
 
-    return db.Coachee.findAll({ where, include: [
-        {model: db.Partner, required: true},
-        {model: db.Session, required: false}
-      ] });
+    return db.Coachee.findAll({
+      where,
+      include: [
+        { model: db.Partner, required: true },
+        { model: db.Session, required: false },
+      ],
+    });
   });
 };

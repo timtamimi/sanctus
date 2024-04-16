@@ -6,9 +6,9 @@ export default (app) => {
       include: [
         {
           model: db.Session,
-          required: false
-        }
-      ]
+          required: false,
+        },
+      ],
     });
   });
 };
