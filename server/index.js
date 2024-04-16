@@ -1,5 +1,7 @@
 import db from './models/index.js';
 import Fastify from 'fastify';
+import cors from '@fastify/cors'
+
 import loadData from './models/loadData.js';
 import routes from './routes/index.js';
 
@@ -11,6 +13,8 @@ const HTTP_PORT = process.env.PORT || 8080;
 const app = Fastify({
   logger: true,
 });
+
+await app.register(cors)
 
 routes(app);
 app.listen(HTTP_PORT, async () => {

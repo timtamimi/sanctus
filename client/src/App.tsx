@@ -1,33 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
+import api from './api'
 import './App.css'
+import LoadingSpinner from "./LoadingSpinner";
+import CriticalError from "./CriticalError";
+import DataBrowser from "./DataBrowser";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true)
+  const [criticalError, setCriticalError] = useState(false)
+
+
+    const [partners, setPartners] = useState([])
+    const [coaches, setCoaches] = useState([])
+    const [coachees, setCoachees] = useState([])
+    const [sessions, setSessions] = useState([])
+
+    useEffect(() => {
+        /* Note: This is absolutely absurd. Don't do this IRL. */
+        Promise.all([
+            api.get('/partners').then(response => {
+                setPartners(response.data);
+            }).catch(err => {
+                console.log(err)
+            }),
+            api.get('/coaches').then(response => {
+                setCoaches(response.data);
+            }).catch(err => {
+                console.log(err)
+            }),
+            api.get('/coachees').then(response => {
+                setCoachees(response.data);
+            }).catch(err => {
+                console.log(err)
+            }),
+            api.get('/sessions').then(response => {
+                setSessions(response.data);
+            }).catch(err => {
+                console.log(err)
+            })
+
+        ]).then(() => {
+            setLoading(false);
+        }).catch(err => {
+            setLoading(false);
+            setCriticalError(true);
+        })
+    }, [])
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        {loading && <LoadingSpinner />}
+        {!!criticalError && <CriticalError />}
+        {!criticalError && !loading && <DataBrowser
+            coachees={coachees}
+            coaches={coaches}
+            sessions={sessions}
+            partners={partners}
+        />}
     </>
   )
 }
