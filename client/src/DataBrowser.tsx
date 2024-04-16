@@ -65,8 +65,14 @@ export default (props) => {
         ],
         sessions: [
             { field: "sessionStart", headerName: "Start time", width: 150 },
-            { field: "coach.email", headerName: "Coach", width: 150 },
-            { field: "coachee.name", headerName: "Coachee", width: 150 },
+            { field: "CoachEmail", headerName: "Coach", width: 150, },
+            {
+                field: "coachee.name",
+                headerName: "Coachee",
+                width: 150,
+                renderCell: ({ row }) =>
+                    `${row?.Coachee?.firstName} ${row?.Coachee?.lastName}`,
+            },
             { field: "attended", headerName: "Attended", width: 150 },
         ],
     };
