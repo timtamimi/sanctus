@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "pre-commit": "npm run --filter \"@product/*\" pre-commit",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.2"
+  }
+}

@@ -40,12 +40,12 @@ export default (props) => {
             },
         ],
         coaches: [
-            { field: "email", headerName: "Email", width: 150 },
+            { field: "email", headerName: "Email", width: 300 },
             {
                 field: "Sessions",
                 valueGetter: (value) => value?.length,
                 headerName: "Sessions delivered (January)",
-                width: 150,
+                width: 200,
                 renderCell: ({ row }) => row?.Sessions.length,
                 type: "number",
             },
@@ -65,7 +65,7 @@ export default (props) => {
         ],
         sessions: [
             { field: "sessionStart", headerName: "Start time", width: 150 },
-            { field: "CoachEmail", headerName: "Coach", width: 150, },
+            { field: "CoachEmail", headerName: "Coach", width: 150 },
             {
                 field: "coachee.name",
                 headerName: "Coachee",
@@ -85,10 +85,18 @@ export default (props) => {
                     exclusive
                     onChange={(event, value) => setDataView(value)}
                 >
-                    <ToggleButton value="coaches">Coaches</ToggleButton>
-                    <ToggleButton value="coachees">Coachees</ToggleButton>
-                    <ToggleButton value="partners">Partners</ToggleButton>
-                    <ToggleButton value="sessions">Sessions</ToggleButton>
+                    <ToggleButton value="coaches" disabled={dataView == "coaches"}>
+                        Coaches
+                    </ToggleButton>
+                    <ToggleButton value="coachees" disabled={dataView == "coachees"}>
+                        Coachees
+                    </ToggleButton>
+                    <ToggleButton value="partners" disabled={dataView == "partners"}>
+                        Partners
+                    </ToggleButton>
+                    <ToggleButton value="sessions" disabled={dataView == "sessions"}>
+                        Sessions
+                    </ToggleButton>
                 </ToggleButtonGroup>
             </Grid>
             <Grid item xs={12}>

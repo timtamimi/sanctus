@@ -2,6 +2,8 @@ import db from '../models/index.js';
 
 export default (app) => {
   app.get('/sessions', (req, res) => {
+    // TODO add filter and pagination
+
     return db.Session.findAll({
       include: [
         {

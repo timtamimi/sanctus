@@ -14,7 +14,7 @@ export default (app) => {
         },
       ],
     });
-    console.log(partners);
+
     const parsedPartners = partners.map((eachPartner) => {
       const sessionCount = eachPartner.Coachees.reduce((a, b) => a + b?.Sessions?.length, 0);
       return {
@@ -23,7 +23,7 @@ export default (app) => {
         delta: eachPartner.dataValues.expectedMonthlyUsage - sessionCount,
       };
     });
-    console.log({ parsedPartners });
+
     return parsedPartners;
   });
 };
